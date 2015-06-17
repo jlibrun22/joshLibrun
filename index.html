@@ -1,0 +1,47 @@
+<html>
+<head>
+
+	 <script>
+    /*
+     * Dynamic script loading
+     */
+
+    (function() {
+      var m = location.search.match(/jquery=([^&$]*)/);
+      var jQueryVersion = m ? m[1] : "1.8.1";
+
+      function addScript(src) {
+        document.write("<scr"+"ipt src='"+src+"'></scr"+"ipt>");
+      }
+
+      // Dynamically load jQuery depending on what's passed on get params.
+      if (jQueryVersion === "1.9.0b1") {
+        addScript("http://code.jquery.com/jquery-1.9.0b1.js");
+        addScript("http://code.jquery.com/jquery-migrate-1.0.0b1.js");
+      } else {
+        addScript("http://ajax.googleapis.com/ajax/libs/jquery/"+jQueryVersion+"/jquery.min.js");
+      }
+     })();
+  </script>
+  
+<script src= "jquery.transit/jquery.transit.js" type="text/javascript"></script>
+<script src= "test.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+<body>
+	<div class="container">
+<div class="slider">
+  <div class="area">
+  <div class="slide"></div>
+</div>
+</div>
+
+<button id="test-button">Test</button>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+* { margin: 0; padding: 0; font-size: 1em; }
+html { padding: 40px; background: #e3e3e7; }
+body, td, input, textarea { font-family: helvetica neue, sans-serif; font-size: 9pt; color: #444; line-height: 1.4; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+body { padding-top: 50px; }
+.use { position: fixed; top: 0; left: 0; right: 0; padding: 20px; border-bottom: solid 1px rgba(0, 0, 0, 0.1); background: rgba(250, 250, 250, 0.9); z-index: 10; }
+.slide { width: 220px; padding: 20px; float: left; margin: 0 20px 20px 0; background: white; border-radius: 2px; box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05), -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 5px rgba(0, 0, 0, 0.05); }
+.slider .area { width: auto; height: 100px; margin: 10px 0; position: relative; }
+.slider .slide { position: absolute; top: 50%; left: 50%; margin: -16px 0 0 -16px; width: 32px; height: 32px; line-height: 32px; text-align: center; background: #505070; border-radius: 2px; z-index: 2; color: #ddd; }
