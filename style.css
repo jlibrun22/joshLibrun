@@ -1,12 +1,34 @@
-html { padding: 40px; background: black; }
+html { 
+	padding: 40px; 
+	height:100%;
+
+	 background: url(images/cover/texturebackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
 body, td, input, textarea { 
 	font-family: helvetica neue, sans-serif; 
 	font-size: 9pt; color: #444; 
 	line-height: 1.4; 
 	/*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); */
 }
+h1{
+
+	font-size: 2em;
+}
+h3{
+
+	font-size: 1em;
+}
+h2{
+
+	font-size: 1.5em;
+}
 body { 
 	padding-top: 50px; 
+	background-color: transparent;
 }
 .slider{
 
@@ -28,8 +50,8 @@ body {
 	top: 50%; 
 	left: 50%; 
     margin: 0 auto;
-	width: 60px; 
-	height: 60px; 
+	width: 80px; 
+	height: 80px; 
 	background: #505070; 
 	border-radius: 52px; 
 	z-index: 2; 
@@ -53,4 +75,88 @@ body {
   top: 50%;
   left: 0;
 
+}
+
+/*Skrollr styles*/
+
+
+/*Slide Styles*/
+
+/*profile*/
+#profile-image{
+
+width: 35%;
+border-radius: 52px; 
+
+}
+/*Resume*/
+#resume section{
+
+	-webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
+
+  /*margin-top: 4px;*/
+  background: grey;
+  border-radius: 10px; 
+  padding: 2px;
+  position: absolute;
+}
+
+
+.top-left-image{
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 2px;
+  width:30%;
+
+}
+
+.resume-block-body{
+
+	display: table-cell;
+  vertical-align: top;
+    width: 10000px;
+    overflow: hidden;
+}
+
+
+
+
+.move-away{
+	-webkit-animation: anim2 ease-in-out 1.5s alternate; 
+
+}
+@-webkit-keyframes anim2
+{
+   from {left: 0px;   -webkit-transform: scale(1.0) rotate(0deg)   }
+   50%  {left: 50px; -webkit-transform: scale(0.85) rotate(180deg); opacity : .7;}
+   to   {left: 0px; -webkit-transform: scale(.3) rotate(-360deg);z-index:1; opacity:.6; margin-top:40% ; }
+}
+
+.move-center{
+	-webkit-animation: anim3 ease-in-out 1.5s alternate; 
+
+}
+@-webkit-keyframes anim3
+{
+   from {left: 0px;   -webkit-transform: scale(.3) rotate(0deg)   }
+   50%  {left: 50px; -webkit-transform: scale(0.85) rotate(180deg); opacity:.7; }
+   to   {left: 0px; -webkit-transform: scale(1) rotate(-360deg); z-index:10; opacity:1; margin-top:10% ;}
+}
+
+
+#front-end-dev-block{
+	top: 10%;
+	z-index:10;
+
+}
+
+#itlp-block{
+	top: 50%;
+	transform: scale(.3);
+	opacity: .6;
+	
 }

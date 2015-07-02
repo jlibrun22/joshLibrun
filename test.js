@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-var iterator = 0;
-
+var iterator = -1;
+//I should make this an object of template name THEN json object of event handlers
 var templateArray = ['profile','resume','brand'];
 
 var tmpl;
@@ -70,7 +70,6 @@ $.ajax({
 
 
 
-
 var nextSlide =  function(){
 
         if(iterator!=templateArray.length-1){
@@ -111,9 +110,26 @@ $('.slide')
         .html('' + tmpl);
 
             });
-       
+       }
 
-    
+
+/*Rotationg Blocks test*/
+var rotateBlocks = function(newActive){
+
+$("#resume").find( ".active-block" ).removeClass('move-center').addClass('move-away');
+$(newActive).removeClass("move-away").addClass('move-center');
+
 }
+
+
+//$('body').on('click','#resume section',rotateBlocks());
+$('body').on('click','#resume section',function(event){
+    var el = ($(event.target).is('section'))? event.target : event.target.parentElement;
+   if($(el).hasClass('inactive-block') ){
+
+    rotateBlocks(el);
+   }
+    
+});
 
 });

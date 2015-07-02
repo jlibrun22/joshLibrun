@@ -1,31 +1,11 @@
 <html>
 <head>
 
-	 <script>
-    /*
-     * Dynamic script loading
-     */
-
-    (function() {
-      var m = location.search.match(/jquery=([^&$]*)/);
-      var jQueryVersion = m ? m[1] : "1.8.1";
-
-      function addScript(src) {
-        document.write("<scr"+"ipt src='"+src+"'></scr"+"ipt>");
-      }
-
-      // Dynamically load jQuery depending on what's passed on get params.
-      if (jQueryVersion === "1.9.0b1") {
-        addScript("http://code.jquery.com/jquery-1.9.0b1.js");
-        addScript("http://code.jquery.com/jquery-migrate-1.0.0b1.js");
-      } else {
-        addScript("http://ajax.googleapis.com/ajax/libs/jquery/"+jQueryVersion+"/jquery.min.js");
-      }
-     })();
-  </script>
-  
+  <script src= "libs/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src= "jquery.transit/jquery.transit.js" type="text/javascript"></script>
 <script src= "test.js" type="text/javascript"></script>
+<script src= "libs/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<!--<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css">-->
 <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
@@ -40,5 +20,13 @@
 
 
 </body>
+
+<script type="text/javascript" src="skrollr-master/dist/skrollr.min.js"></script>
+  <script type="text/javascript">
+  skrollr.init({
+    smoothScrolling: false,
+    mobileDeceleration: 0.004
+  });
+  </script>
 
 </html>
