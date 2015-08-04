@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     var iterator = -1;
     //I should make this an object of template name THEN json object of event handlers
-    var templateArray = ['profile', 'resume', 'brand'];
+    var templateArray = ['profile', 'resume', 'brand', 'projects'];
 
     var tmpl;
 
