@@ -1,11 +1,11 @@
 html {
-    padding: 40px;
     height: 100%;
     background: url(images/cover/texturebackground.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overlow: hidden;
 }
 body,
 td,
@@ -27,7 +27,7 @@ h2 {
     font-size: 1.5em;
 }
 body {
-    padding-top: 50px;
+    height:100%! important;
     background-color: transparent;
 }
 .slider {
@@ -38,16 +38,16 @@ body {
     right: 0;
     margin: auto;
     z-index: 9;
-    width: 700px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
 }
-.slider .slide {
+.slider .mini-slide {
     position: absolute;
     top: 50%;
     left: 50%;
     margin: 0 auto;
-    width: 80px;
-    height: 80px;
+    width: 35em;
+    height: 35em;
     background: #505070;
     border-radius: 52px;
     z-index: 2;
@@ -55,14 +55,40 @@ body {
     overflow: visible;
     font-size: .2em;
 }
+
+
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 2;
+    color: #ddd;
+    background: url(images/cover/boxman.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#prev-button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 20;
+}
+
 #next-button {
     position: absolute;
     top: 50%;
     right: 0;
+    z-index: 20;
 }
 
 .slider-button:hover,
-.slider-button:active {
+.slider-button:active,
+.slider-button:focus {
     outline: 0;
 }
 
@@ -121,11 +147,7 @@ body {
                 0 -1px 2px 8px hsla(0,0%,0%,.5);
     line-height: 86px;
 }
-#prev-button {
-    position: absolute;
-    top: 50%;
-    left: 0;
-}
+
 /*Skrollr styles*/
 /*Slide Styles*/
 /*profile*/
@@ -182,10 +204,11 @@ section img {
 
 
 #rotator > div {
-  background : rgb(74, 74, 161);
+  /*background : rgb(74, 74, 161);*/
 
+  background : #4f4d49;
     position: absolute;
-    overflow-y: hidden;
+    overflow: hidden;
     border-radius: 6px;
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
@@ -343,3 +366,91 @@ section img {
     transform: rotateY(180deg);
     left: 0;
 }
+
+/*skrollr styles*/
+
+.parallax-image-wrapper {
+        position:fixed;
+        left:0;
+        width:100%;
+        overflow:hidden;
+    }
+
+    .parallax-image-wrapper-50 {
+        height:50%;
+        top:-50%;
+    }
+
+    .parallax-image-wrapper-100 {
+        height:100%;
+        top:-100%;
+    }
+
+    .parallax-image {
+        display:none;
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:cover;
+    }
+
+    .parallax-image-50 {
+        height:200%;
+        top:-50%;
+    }
+
+    .parallax-image-100 {
+        height:100%;
+        top:0;
+    }
+
+    .parallax-image.skrollable-between {
+        display:block;
+    }
+
+    .no-skrollr .parallax-image-wrapper {
+        display:none !important;
+    }
+
+    #skrollr-body {
+        height:100%;
+        overflow:visible;
+        position:relative;
+    }
+
+    .gap {
+        background:transparent center no-repeat;
+        background-size:cover;
+    }
+
+    .skrollr .gap {
+        background:transparent !important;
+    }
+
+    .gap-50 {
+        height:50%;
+    }
+
+    .gap-100 {
+        height:100%;
+    }
+
+    .header, .content {
+        background:#fff;
+        padding:1em;
+
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+    }
+
+    .content-full {
+        height:100%;
+    }
+
+    #done {
+        height:100%;
+    }

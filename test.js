@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 
     var current;
-
+/*rotater for the resume page*/
     function rotate() {
 
         // This seems like a sucky way to do it, but you can't select by classes because they execute in order
@@ -39,15 +39,30 @@ $(document).ready(function() {
 
     var iterator = -1;
     //I should make this an object of template name THEN json object of event handlers
-    var templateArray = ['profile', 'resume', 'brand', 'projects'];
+    var templateArray = ['profile', 'resume', 'brand', 'projects', 'parrallex-test','contact'];
 
     var tmpl;
 
 
     $('#next-button').click(function() {
+        if (iterator != templateArray.length - 1) {
 
+            iterator++;
 
-        nextSlide();
+        } else {
+            iterator = 0;
+        }
+
+        if(iterator < 4){
+
+            nextSlideMini();
+
+        }
+        else
+        {
+
+         nextSlide();   
+        }
 
     });
 
@@ -55,23 +70,43 @@ $(document).ready(function() {
     $('#prev-button').click(function() {
 
 
-        prevSlide();
+          if (iterator > 0 ) {
 
-    });
-
-
-    var prevSlide = function() {
-
-
-        if (iterator != 0 && iterator != -1) {
             iterator--;
+
         } else {
             iterator = templateArray.length - 1;
         }
 
-        //Move slide off the screen
+        if(iterator < 4){
 
-        $('.slide')
+            prevSlideMini();
+
+        }
+        else
+        {
+
+         prevSlide(); 
+         }  
+    });
+
+     var prevSlideMini = function() {
+
+        //Get html for next slide
+        var slideTemplate = templateArray[iterator];
+
+        $.ajax({
+            url: 'templates/' + slideTemplate + '.html',
+            type: 'get',
+            async: false,
+            success: function(html) {
+                tmpl = html;
+            }
+        });
+
+        //Move slide off the screen
+        var selector = $('#main-slide').hasClass('slide') ? '.slide' : '.mini-slide';
+        $(selector)
             .transition({
                 scale: 1
             })
@@ -79,10 +114,12 @@ $(document).ready(function() {
                     x: 1500
                 },
                 function() {
+                    //ensure correct class is ont the slide
+                 $('#main-slide').removeClass().addClass('mini-slide');
 
-                    //Move slide from left to center and place template
+                    //Move slide from right to center and place template
 
-                    $('.slide')
+                    $('.mini-slide')
                         .css({
                             x: -1500
                         })
@@ -95,37 +132,11 @@ $(document).ready(function() {
                         .html('' + tmpl);
 
                 });
-
-
-        //Get slide template
-
-        var slideTemplate = templateArray[iterator];
-
-        $.ajax({
-            url: 'templates/' + slideTemplate + '.html',
-            type: 'get',
-            async: false,
-            success: function(html) {
-                tmpl = html;
-            }
-        });
-
-
-
     }
 
 
 
-
-    var nextSlide = function() {
-
-        if (iterator != templateArray.length - 1) {
-
-            iterator++;
-
-        } else {
-            iterator = 0;
-        }
+    var prevSlide = function() {
 
 
         //Get html for next slide
@@ -140,21 +151,63 @@ $(document).ready(function() {
             }
         });
 
-
         //Move slide off the screen
-
-        $('.slide')
+        var selector = $('#main-slide').hasClass('slide') ? '.slide' : '.mini-slide';
+        $(selector)
             .transition({
                 scale: 1
             })
             .transition({
-                    x: -1500
+                    x: 4500
                 },
                 function() {
 
-                    //Move slide from right to left
+                    $('#main-slide').removeClass().addClass('slide');
+                    //Move slide from left to center and place template
 
                     $('.slide')
+                        .css({
+                            x: -1500
+                        })
+                        .transition({
+                            x: 0
+                        })
+                        .html('' + tmpl);
+
+                });
+    }
+
+
+    var nextSlideMini = function() {
+
+        //Get html for next slide
+        var slideTemplate = templateArray[iterator];
+
+        $.ajax({
+            url: 'templates/' + slideTemplate + '.html',
+            type: 'get',
+            async: false,
+            success: function(html) {
+                tmpl = html;
+            }
+        });
+
+        //Move slide off the screen
+        var selector = $('#main-slide').hasClass('slide') ? '.slide' : '.mini-slide';
+        $(selector)
+            .transition({
+                scale: 1
+            })
+            .transition({
+                    x: -4500
+                },
+                function() {
+                    //ensure correct class is ont the slide
+                 $('#main-slide').removeClass().addClass('mini-slide');
+
+                    //Move slide from right to center and place template
+
+                    $('.mini-slide')
                         .css({
                             x: 1500
                         })
@@ -163,6 +216,49 @@ $(document).ready(function() {
                         })
                         .transition({
                             scale: 9
+                        })
+                        .html('' + tmpl);
+
+                });
+    }
+
+
+
+    var nextSlide = function() {
+
+
+        //Get html for next slide
+        var slideTemplate = templateArray[iterator];
+
+        $.ajax({
+            url: 'templates/' + slideTemplate + '.html',
+            type: 'get',
+            async: false,
+            success: function(html) {
+                tmpl = html;
+            }
+        });
+
+        //Move slide off the screen
+        var selector = $('#main-slide').hasClass('slide') ? '.slide' : '.mini-slide';
+        $(selector)
+            .transition({
+                scale: 1
+            })
+            .transition({
+                    x: -1500
+                },
+                function() {
+
+                    $('#main-slide').removeClass().addClass('slide');
+                    //Move slide from left to center and place template
+
+                    $('.slide')
+                        .css({
+                            x: 1500
+                        })
+                        .transition({
+                            x: 0
                         })
                         .html('' + tmpl);
 
@@ -195,6 +291,7 @@ $(document).ready(function() {
         current = this.id.substr(6);
         rotate();
     });
+
 
 
 
