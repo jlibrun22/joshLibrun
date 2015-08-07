@@ -405,14 +405,7 @@ section img {
     .parallax-image-100 {
         height:100%;
         top:0;
-    }
 
-    .parallax-image.skrollable-between {
-        display:block;
-    }
-
-    .no-skrollr .parallax-image-wrapper {
-        display:none !important;
     }
 
     #skrollr-body {
@@ -422,20 +415,34 @@ section img {
     }
 
     .gap {
-        background:transparent center no-repeat;
-        background-size:cover;
+            background-attachment: fixed;
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            height: 450px;
+            position: relative;
+            width: 100%;
     }
 
     .skrollr .gap {
         background:transparent !important;
     }
 
-    .gap-50 {
-        height:50%;
+    .first-gap {
+        height:150%;
+        background-image:url(images/cover/code-motto.jpg);
+    }
+    .second-gap {
+        background-image:url(images/cover/code-poetry.png);
+         height:200%;
+    }
+     .third-gap {
+         height:100%;
+        background-image:url(images/cover/shower-box-man.jpg);
     }
 
-    .gap-100 {
-        height:100%;
+
+    .last-gap {
+        background-image:url(images/cover/giraffe.jpg);
     }
 
     .header, .content {
@@ -451,6 +458,3 @@ section img {
         height:100%;
     }
 
-    #done {
-        height:100%;
-    }
