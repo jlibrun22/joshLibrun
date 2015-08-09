@@ -1,0 +1,67 @@
+/*responsive*/
+
+@media (max-width: 900px) {
+#rotator {
+    width: 100%;
+    height: 85%;
+    position: relative;
+    left: -5px;
+}
+
+
+.slider-button.depth {
+    height: 60px;
+    width: 100px;
+}
+
+}
+
+@media (max-width: 760px) {
+
+.slider .mini-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    width: 20em;
+    height: 20em;
+    background: #505070;
+    border-radius: 52px;
+    z-index: 2;
+    color: #ddd;
+    overflow: visible;
+    font-size: .2em;
+}
+
+
+.slider-button.depth {
+    border-radius: 80px;
+    font: bold 10px/25px sans-serif;
+    height: 50px;
+    width: 70px;
+}
+
+
+#rotator {
+    width: 130%;
+    height: 100%;
+    position: relative;
+    left: -11px;
+}
+h2 {
+    font-size: 1em;
+}
+
+#rotator h2 {
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 10%;
+}
+
+#rotator .active h2 {
+    /* display: none; */
+    margin-top: 8%;
+    margin-bottom: 0%;
+}
+
+}

@@ -270,17 +270,6 @@ $(document).ready(function() {
         });
        
 
-    }
-
-    //$('body').on('click','#resume section',rotateBlocks());
-    /*$('body').on('click','#resume section',function(event){
-        var el = ($(event.target).is('section'))? event.target : event.target.parentElement;
-       if($(el).hasClass('inactive-block') ){
-
-        rotateBlocks(el);
-       }
-        
-    });*/
 
 
 
