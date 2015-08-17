@@ -1,7 +1,8 @@
- @font-face { font-family: Cicle; src: url('cicle/Cicle-Fina.ttf'); } 
+@font-face { font-family: Cicle; src: url('cicle/Cicle-Fina.ttf'); } 
 html {
     height: 100%;
-    background: url(../images/cover/texturebackground.jpg) no-repeat center center fixed;
+    background: #fff;
+    /*background: url(../images/cover/texturebackground.jpg) no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,7 +16,7 @@ textarea {
     font-family: Cicle;
     font-size: 9pt;
     color: #444;
-    line-height: 1.5;
+    line-height: 1.2;
     /*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); */
 }
 h1 {
@@ -176,7 +177,31 @@ ul li:before
                 0 -1px 2px 8px hsla(0,0%,0%,.5);
     line-height: 86px;
 }
+/* Navigation Styles */
 
+
+body.fsm-body {
+     background: transparant;
+     margin: 0;
+
+}
+
+.fsm-container {
+    background: url(../images/cover/texturebackground.jpg) no-repeat center center fixed;
+    height: 100%;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fsm-button {
+    right: -150px;
+    color: #FFF;
+    width: 80px;
+    height: 80px;
+    font-size: 10em;
+}
 
 /*profile*/
 
@@ -190,6 +215,10 @@ section img {
     border-radius: 52px;
     padding-left: 1em;
 
+}
+#profile {
+
+    margin-top: -12%;
 }
 
 #profile p{

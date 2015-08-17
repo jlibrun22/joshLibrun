@@ -6,12 +6,16 @@ require.config({
         //paths
         jquery : 'libs/jquery/jquery-1.11.3.min',
         'jquery-transit' : 'libs/jquery.transit/jquery.transit',
+        'fly-sideMenu' : 'libs/fly-sideMenu/jquery.fly_sidemenu',
         libs: 'libs',
         bootstrap: 'libs/bootstrap/js/bootstrap' 
 
     },
     shim: {
         'jquery-transit': {
+            deps: [ 'jquery']
+        },
+        'fly-sideMenu': {
             deps: [ 'jquery']
         },
         bootstrap: {
@@ -27,7 +31,9 @@ require.config({
 require([
     'jquery',
     'jquery-transit',
-    'bootstrap'
+    'bootstrap',
+    'fly-sideMenu',
+    'Router'
 ], function () {
 
     var iterator = -1;
@@ -38,24 +44,29 @@ require([
 
 
     $('#next-button').click(function() {
-        if (iterator != templateArray.length - 1) {
+            if (iterator != templateArray.length - 1) {
 
-            iterator++;
+                iterator++;
 
-        } else {
-            iterator = 0;
-        }
+            } else {
+                iterator = 0;
+            }
 
-        if(iterator < 3){
+            if(iterator < 3){
 
-            nextSlideMini();
+                //nextSlideMini();
+                document.location.hash = templateArray[iterator] + '?size=mini&&direction=next';
 
-        }
-        else
-        {
 
-         nextSlide();   
-        }
+            }
+            else
+            {
+
+             //nextSlide(); 
+            document.location.hash = templateArray[iterator] + '?size=full&&direction=next';
+
+
+            }
 
     });
 
@@ -73,13 +84,16 @@ require([
 
         if(iterator < 3){
 
-            prevSlideMini();
+            //prevSlideMini();
+            document.location.hash = templateArray[iterator] + '?size=mini&&direction=prev';
 
         }
         else
         {
 
-         prevSlide(); 
+         //prevSlide(); 
+        document.location.hash = templateArray[iterator] + '?size=full&&direction=prev';
+
          }  
     });
 
@@ -297,5 +311,100 @@ require([
        
 
 }
+
+function changeView(size, direction){
+
+    if (direction == 'prev'){
+
+        if(size == 'full'){
+
+                   prevSlide();
+
+        }
+        else{
+
+
+             prevSlideMini();
+        }
+      }
+      else {
+
+      if(size== 'full'){
+
+              nextSlide();
+        }
+
+        else {
+            nextSlideMini();
+
+          
+        }
+
+    }
+}
+
+ $(".sidemenu").fly_sidemenu({
+    btnContent: "=", // This option let you define what appears inside the side menu button. You can add your custom icon here. This option accepts all HTML tags. The default value is "=" string.
+    position: "left", // This option will let you define where the sidebar will appear on the page. Available options are "top", "left", "right", "bottom". The default value is "left"
+    customSelector: "li", // In case you do not want to use lists, simply define your own css selector here. The default value is "li".
+    hideButton: false // You can disable the auto creation of toggle button by changing this to true. The default value is false.
+  });
+
+// configuration
+var r = Rlite();
+
+// Default route
+r.add('', function () {
+
+  console.log('we are home');
+
+      console.log('default');
+
+            iterator = 0;
+      
+
+            changeView();
+});
+
+
+// #sent?to=john -> r.params.to will equal 'john'
+r.add('resume', function (r) {
+    console.log('called resume')
+    iterator = templateArray.indexOf('resume');
+
+    changeView(r.params.size, r.params.direction);
+});
+
+// #sent?to=john -> r.params.to will equal 'john'
+r.add('brand', function (r) {
+    console.log('called brand')
+    iterator = templateArray.indexOf('brand');
+
+    changeView(r.params.size, r.params.direction);
+});
+// #sent?to=john -> r.params.to will equal 'john'
+r.add('projects', function (r) {
+    console.log('called projects')
+    iterator = templateArray.indexOf('projects');
+
+    changeView(r.params.size, r.params.direction);
+});
+// #sent?to=john -> r.params.to will equal 'john'
+r.add('contact', function (r) {
+    console.log('called contact')
+    iterator = templateArray.indexOf('contact');
+
+    changeView(r.params.size, r.params.direction);
+});
+
+
+// Hash-based routing
+function processHash() {
+  var hash = location.hash || '#';
+  r.run(hash.slice(1));
+}
+
+window.addEventListener('hashchange', processHash);
+processHash();
 
 });
