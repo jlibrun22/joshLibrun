@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     var iterator = -1;
     //I should make this an object of template name THEN json object of event handlers
-    var templateArray = ['profile', 'resume', 'brand', 'projects', 'parrallex-test','contact'];
+    var templateArray = ['profile', 'resume', 'brand', 'projects', 'parrallex-test',/*'skrollr-test',*/'contact'];
 
     var tmpl;
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
             iterator = 0;
         }
 
-        if(iterator < 4){
+        if(iterator < 3){
 
             nextSlideMini();
 
@@ -45,7 +45,7 @@ $(document).ready(function() {
             iterator = templateArray.length - 1;
         }
 
-        if(iterator < 4){
+        if(iterator < 3){
 
             prevSlideMini();
 
@@ -264,13 +264,13 @@ $(document).ready(function() {
     }
 
     var loadJS = function(fileName){
-         var path = 'js/' + fileName;
+         var path = fileName;
         require([path], function (js) {
     //js is now loaded.
         });
        
 
-
+}
 
 
 
