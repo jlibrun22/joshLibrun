@@ -38,7 +38,7 @@ require([
 
     var iterator = -1;
     //I should make this an object of template name THEN json object of event handlers
-    var templateArray = ['profile', 'resume', 'brand', 'projects', /*'parrallex-test','skrollr-test',*/'contact'];
+    var templateArray = ['profile', 'resume', /*'brand',*/ 'projects', /*'parrallex-test','skrollr-test',*/'contact'];
 
     var tmpl;
 
@@ -54,7 +54,7 @@ require([
 
             if(iterator < 3){
 
-                //nextSlideMini();
+               
                 document.location.hash = templateArray[iterator] + '?size=mini&&direction=next';
 
 
@@ -62,7 +62,7 @@ require([
             else
             {
 
-             //nextSlide(); 
+         
             document.location.hash = templateArray[iterator] + '?size=full&&direction=next';
 
 
@@ -84,14 +84,14 @@ require([
 
         if(iterator < 3){
 
-            //prevSlideMini();
+            
             document.location.hash = templateArray[iterator] + '?size=mini&&direction=prev';
 
         }
         else
         {
 
-         //prevSlide(); 
+         
         document.location.hash = templateArray[iterator] + '?size=full&&direction=prev';
 
          }  
@@ -368,6 +368,13 @@ r.add('', function () {
 
 
 // #sent?to=john -> r.params.to will equal 'john'
+r.add('profile', function (r) {
+    console.log('called profile')
+    iterator = templateArray.indexOf('profile');
+
+    changeView(r.params.size, r.params.direction);
+});
+
 r.add('resume', function (r) {
     console.log('called resume')
     iterator = templateArray.indexOf('resume');
