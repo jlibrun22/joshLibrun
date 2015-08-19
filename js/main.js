@@ -52,7 +52,7 @@ require([
                 iterator = 0;
             }
 
-            if(iterator < 3){
+            if(iterator < 2){
 
                
                 document.location.hash = templateArray[iterator] + '?size=mini&&direction=next';
@@ -82,7 +82,7 @@ require([
             iterator = templateArray.length - 1;
         }
 
-        if(iterator < 3){
+        if(iterator < 2){
 
             
             document.location.hash = templateArray[iterator] + '?size=mini&&direction=prev';
