@@ -41,6 +41,11 @@ require([
     var templateArray = ['profile', 'resume', /*'brand',*/ 'projects', /*'parrallex-test','skrollr-test',*/'contact'];
 
     var tmpl;
+  
+    $('body').on('click', '.fsm-list li', function(event) {
+            $('.fsm-wrapper').removeClass('open');
+
+    });
 
 
     $('#next-button').click(function() {

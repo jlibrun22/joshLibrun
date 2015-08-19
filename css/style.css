@@ -84,6 +84,7 @@ ul li:before
     overflow: visible;
     font-size: .2em;
     padding: 1em 1em;
+    line-height: 1.5;
 }
 
 
@@ -386,11 +387,12 @@ section img {
     }
     
 .more-info{
-    margin: 20% 0px;
+    margin: 10% 0px;
     color: silver;
     text-transform: uppercase;
     letter-spacing: 0px;
     } 
+    
 .cl-effect-1 .more-info {
         margin: 5% 5%;
     }
@@ -498,7 +500,7 @@ section img {
 }
 
 .ch-grid {
-    margin: 20px 0 0 0;
+    margin-top: -8%;
     padding: 0;
     list-style: none;
     display: block;
