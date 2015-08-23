@@ -5,6 +5,10 @@ require.config({
     paths: {
         //paths
         jquery : 'libs/jquery/jquery-1.11.3.min',
+        semantic: 'libs/dist/semantic.min',
+        modal: 'libs/dist/components/modal.min',
+        dimmer: 'libs/dist/components/dimmer.min',
+        transition: 'libs/dist/components/transition.min',
         'jquery-transit' : 'libs/jquery.transit/jquery.transit',
         'fly-sideMenu' : 'libs/fly-sideMenu/jquery.fly_sidemenu',
         libs: 'libs',
@@ -13,6 +17,18 @@ require.config({
     },
     shim: {
         'jquery-transit': {
+            deps: [ 'jquery']
+        },
+        semantic: {
+            deps: [ 'jquery']
+        },
+        modal: {
+            deps: [ 'jquery', 'dimmer','transition']
+        },
+        dimmer: {
+            deps: [ 'jquery']
+        },
+         transition: {
             deps: [ 'jquery']
         },
         'fly-sideMenu': {
@@ -31,7 +47,8 @@ require.config({
 require([
     'jquery',
     'jquery-transit',
-    'bootstrap',
+    'transition',
+    'modal',
     'fly-sideMenu',
     'Router'
 ], function () {
@@ -119,10 +136,10 @@ require([
         //Move slide off the screen
         var selector = $('#main-slide').hasClass('slide') ? '.slide' : '.mini-slide';
         $(selector)
-            .transition({
+            .jQuerytransition({
                 scale: 1
             })
-            .transition({
+            .jQuerytransition({
                     x: 1500
                 },
                 function() {
@@ -135,10 +152,10 @@ require([
                         .css({
                             x: -1500
                         })
-                        .transition({
+                        .jQuerytransition({
                             x: 0
                         })
-                        .transition({
+                        .jQuerytransition({
                             scale: 9,
                             complete: function() { 
 
@@ -171,10 +188,10 @@ require([
         //Move slide off the screen
         var selector = $('#main-slide').hasClass('slide') ? '.slide' : '.mini-slide';
         $(selector)
-            .transition({
+            .jQuerytransition({
                 scale: 1
             })
-            .transition({
+            .jQuerytransition({
                     x: 4500
                 },
                 function() {
@@ -186,7 +203,7 @@ require([
                         .css({
                             x: -1500
                         })
-                        .transition({
+                        .jQuerytransition({
                             x: 0,
                         complete: function() { 
 
@@ -217,10 +234,10 @@ require([
         //Move slide off the screen
         var selector = $('#main-slide').hasClass('slide') ? '.slide' : '.mini-slide';
         $(selector)
-            .transition({
+            .jQuerytransition({
                 scale: 1
             })
-            .transition({
+            .jQuerytransition({
                     x: -4500
                 },
                 function() {
@@ -233,10 +250,10 @@ require([
                         .css({
                             x: 1500
                         })
-                        .transition({
+                        .jQuerytransition({
                             x: 0
                         })
-                        .transition({
+                        .jQuerytransition({
                             scale: 9,
                             complete: function() { 
 
@@ -270,10 +287,10 @@ require([
         //Move slide off the screen
         var selector = $('#main-slide').hasClass('slide') ? '.slide' : '.mini-slide';
         $(selector)
-            .transition({
+            .jQuerytransition({
                 scale: 1
             })
-            .transition({
+            .jQuerytransition({
                     x: -1500
                 },
                 function() {
@@ -285,7 +302,7 @@ require([
                         .css({
                             x: 1500
                         })
-                        .transition({
+                        .jQuerytransition({
                             x: 0,
                               complete: function() { 
 
@@ -309,11 +326,16 @@ require([
     }
 
     var loadJS = function(fileName){
-         var path = fileName;
-        require([path], function (js) {
-    //js is now loaded.
-        });
+         
+
+         if (!require.defined(fileName)){
+         require([fileName], function (js) {
+        //js is now loaded.
+            });
        
+
+         }
+   
 
 }
 

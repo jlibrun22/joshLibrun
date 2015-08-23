@@ -1,0 +1,57 @@
+<html>
+<head>
+
+<link href='modal.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+
+<body>
+<div>
+  <button class="ui primary test button">Launch modal</button>
+</div>
+<div class="ui standard test modal transition hidden" >
+    <div class="header">
+      Select a Photo
+    </div>
+    <div class="image content">
+      <div class="ui medium image">
+        <img src="/images/avatar2/large/rachel.png">
+      </div>
+      <div class="description">
+        <div class="ui header">Default Profile Image</div>
+        <p>We've found the following <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your e-mail address.</p>
+        <p>Is it okay to use this photo?</p>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui black deny button">
+        Nope
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yep, that's me
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../jquery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="modal.js"></script>
+
+<script>
+/*
+$('.test.modal')
+  .modal('attach events', '.test.button', 'show')
+;
+
+
+ $('.test.button').click(function(){
+        $('.test.modal').modal('show');
+    });
+
+</script>
+
+
+
+</html>

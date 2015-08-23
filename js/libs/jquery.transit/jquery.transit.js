@@ -545,7 +545,7 @@
   //       complete: function() { /* ... */ }
   //      });
   //
-  $.fn.transition = $.fn.transit = function(properties, duration, easing, callback) {
+  $.fn.jQuerytransition = $.fn.transit = function(properties, duration, easing, callback) {
     var self  = this;
     var delay = 0;
     var queue = true;
