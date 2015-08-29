@@ -21,4 +21,6 @@ require([], function() {
         $('.playspot.modal').modal('setting', 'transition', 'vertical flip')
         .modal('show');
     });
+
+    $('#projects-page').height($(document).height());
 });

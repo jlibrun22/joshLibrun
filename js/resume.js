@@ -61,7 +61,9 @@ $(function() {
             showClose: true,
             showCloseText: 'close',
             onBlurContainer: '.container',
-            template: '<p>Details coming Soon.</p>'
+            template: '<p>In this role I worked on either SCRUM teams as a lead or sole UI developer, or worked with a designer to deliver on UI needs for our subbusinesses. Projects included Fleet Optimizer and Apple Leasing App.</p>'
+                        + '<p> For more information on these projects view the <a href="#projects">projects</a> page.</p>' 
+
         });
 
           $('#show-first-rotation').avgrund({
@@ -118,7 +120,8 @@ $(function() {
             showClose: true,
             showCloseText: 'close',
             onBlurContainer: '.container',
-            template: '<p>COMING SOON PLAYSPOT INFO</p>' 
+            template: '<p>This is a mobile app to help connect people around the nation through sports.The purpose of this app is to help people who want to play some form of a pickup game find others who are nearby </p>'
+            + '<p> More information on the <a href="#projects">projects</a> page.</p>' 
 
         });
 

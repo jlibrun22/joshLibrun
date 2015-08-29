@@ -38,21 +38,10 @@ body {
     height:100%! important;
     background-color: transparent;
 }
-/*ul {
-    margin: 1.5em; 
-}
-ul li {
-    list-style-type:none;
-    font-size:1em; 
-}
- 
+.fsm-wrapper{
 
-ul li:before
-{content:'\2713';
-  display:inline-block;
-  color:silver;
-  padding:0 6px 0 0;
-  }*/
+    height: 100%;
+}
 
 .modalDialog {
     background: rgba(0, 0, 0, 0.8);
@@ -281,6 +270,19 @@ section img {
     -moz-column-gap: 40px; /* Firefox */
     column-gap: 40px;
 }
+#skills ul{
+
+    list-style: none;
+    padding: 0;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#skills li{
+
+    margin-bottom: .3em;
+}
 
 
 #rotator img {
@@ -495,6 +497,7 @@ section img {
 
     width:100%;
     height:100%;
+    overflow-y: scroll;
 
 }
 
@@ -698,7 +701,7 @@ section img {
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 9px;
+    font-size: .8rem;
     letter-spacing: 1px;
     padding-top: 24px;
     margin: 7px auto 0;
