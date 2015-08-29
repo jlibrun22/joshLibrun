@@ -151,7 +151,8 @@ require([
                     $('.mini-slide')
                         .css({
                             x: -1500
-                        })
+                        }).empty()
+                        .html('' + tmpl)
                         .jQuerytransition({
                             x: 0
                         })
@@ -161,8 +162,7 @@ require([
 
                  loadJS(slideTemplate);
                  }
-                        })
-                        .html('' + tmpl);
+                        });
 
                 });
             //   loadJS(slideTemplate);
@@ -202,15 +202,15 @@ require([
                     $('.slide')
                         .css({
                             x: -1500
-                        })
+                        }).empty()
+                        .html('' + tmpl)
                         .jQuerytransition({
                             x: 0,
                         complete: function() { 
 
                  loadJS(slideTemplate);
                  }
-                        })
-                        .html('' + tmpl);
+                        });
 
                 });
              //  loadJS(slideTemplate);
@@ -249,7 +249,8 @@ require([
                     $('.mini-slide')
                         .css({
                             x: 1500
-                        })
+                        }).empty()
+                        .html('' + tmpl)
                         .jQuerytransition({
                             x: 0
                         })
@@ -259,8 +260,7 @@ require([
 
                  loadJS(slideTemplate);
                  }
-                        })
-                        .html('' + tmpl);
+                        });
 
                 });
        
@@ -301,15 +301,14 @@ require([
                     $('.slide')
                         .css({
                             x: 1500
-                        })
+                        }).empty().html('' + tmpl)
                         .jQuerytransition({
                             x: 0,
                               complete: function() { 
 
                  loadJS(slideTemplate);
-                 }
-                        })
-                        .html('' + tmpl);
+                    }
+                        });
 
                 });
 
@@ -328,13 +327,17 @@ require([
     var loadJS = function(fileName){
          
 
-         if (!require.defined(fileName)){
+         //if (!require.defined(fileName)){
+            if (require.specified(fileName)){
+            console.log('file is loaded forcing unload');
+            require.undef(fileName);
+        }
          require([fileName], function (js) {
-        //js is now loaded.
+            console.log( fileName + ' is loaded forcing unload');
             });
        
 
-         }
+
    
 
 }

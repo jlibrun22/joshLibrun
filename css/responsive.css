@@ -29,10 +29,54 @@
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-      html{
+       html{
 
-        font-size: 9px;
+        font-size: 10px;
     }
+
+#rotator .active {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+}
+
+#rotator {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
+#rotator .non-active-top {
+    top: 80%;
+    left: 5%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator .non-active-middle {
+    top: 80%;
+    left: 35%;
+    height: 20%;
+    width: 20%;
+}
+#rotator .non-active-bottom {
+    top: 80%;
+    left: 75%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator h2 {
+    margin-top: 100%;
+}
+
+#rotator .active .resume-content {
+   
+    width: 80%;
+    margin: auto;
+}
 
 
 }
@@ -48,7 +92,7 @@
 
     html{
 
-        font-size: 9px;
+        font-size: 10px;
     }
 
 #rotator .active {
@@ -58,28 +102,41 @@
     height: 75%;
 }
 
+#rotator {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
 #rotator .non-active-top {
-    top: 75%;
-    left: 0;
-    height: 25%;
-    width: 33%;
+    top: 80%;
+    left: 5%;
+    height: 20%;
+    width: 20%;
 }
 
 #rotator .non-active-middle {
-    top: 75%;
+    top: 80%;
     left: 35%;
-    height: 25%;
-    width: 33%;
+    height: 20%;
+    width: 20%;
 }
 #rotator .non-active-bottom {
-    top: 75%;
-    left: 70%;
-    height: 25%;
-    width: 33%;
+    top: 80%;
+    left: 75%;
+    height: 20%;
+    width: 20%;
 }
 
 #rotator h2 {
-    margin-top: 40%;
+    margin-top: 100%;
+}
+
+#rotator .active .resume-content {
+   
+    width: 80%;
+    margin: auto;
 }
 
 
@@ -95,8 +152,53 @@
   and (-webkit-device-pixel-ratio: 3) {
       html{
 
-        font-size: 9px;
+        font-size: 10px;
     }
+
+#rotator .active {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+}
+
+#rotator {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
+#rotator .non-active-top {
+    top: 80%;
+    left: 5%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator .non-active-middle {
+    top: 80%;
+    left: 35%;
+    height: 20%;
+    width: 20%;
+}
+#rotator .non-active-bottom {
+    top: 80%;
+    left: 75%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator h2 {
+    margin-top: 100%;
+}
+
+#rotator .active .resume-content {
+   
+    width: 80%;
+    margin: auto;
+}
+
 
 
 }
@@ -108,10 +210,54 @@
   and (device-width: 360px) 
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) {
-      html{
+       html{
 
-        font-size: 9px;
+        font-size: 10px;
     }
+
+#rotator .active {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+}
+
+#rotator {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
+#rotator .non-active-top {
+    top: 80%;
+    left: 5%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator .non-active-middle {
+    top: 80%;
+    left: 35%;
+    height: 20%;
+    width: 20%;
+}
+#rotator .non-active-bottom {
+    top: 80%;
+    left: 75%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator h2 {
+    margin-top: 100%;
+}
+
+#rotator .active .resume-content {
+   
+    width: 80%;
+    margin: auto;
+}
 
 
 }
@@ -137,8 +283,9 @@ html{
     width: 100px;
 }
 
+
 .ch-info h3 {
-    font-size: 2rem;
+    font-size: 1rem;
     width: 80%;
     margin-left: 10%;
     margin-top: 7%;
@@ -151,21 +298,6 @@ html{
 
         font-size:11px;
     }
-
-.slider .mini-slide {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 0 auto;
-    width: 3.25rem;
-    height: 3.25rem;
-    background: #505070;
-    border-radius: 52px;
-    z-index: 2;
-    color: #ddd;
-    overflow: visible;
-   /* font-size: .2em;*/
-}
 
 
 .slider-button.depth {
@@ -210,22 +342,6 @@ html{
         font-size:10px;
     }
 
-.slider .mini-slide {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 0 auto;
-    width: 3.25rem;
-    height: 3.25rem;
-    background: #505070;
-    border-radius: 52px;
-    z-index: 2;
-    color: #ddd;
-    overflow: visible;
-   /* font-size: .2em;*/
-}
-
-
 
 .slider-button.depth {
     display:none;
@@ -233,8 +349,9 @@ html{
 
 #profile{
 
-    width: 140%;
+    width: 120%;
     margin-left: -5px;
+    margin-top: -5px;
 
 }
 
@@ -257,7 +374,7 @@ html{
 
     html{
 
-        font-size: 9px;
+        font-size: 10px;
     }
 
 #rotator .active {
@@ -268,10 +385,10 @@ html{
 }
 
 #rotator {
-    width: 115%;
+    width: 100%;
     height: 100%;
     position: relative;
-    left: -2px;
+    left: 0px;
 }
 
 #rotator .non-active-top {
@@ -289,7 +406,7 @@ html{
 }
 #rotator .non-active-bottom {
     top: 80%;
-    left: 70%;
+    left: 75%;
     height: 20%;
     width: 20%;
 }
@@ -306,4 +423,19 @@ html{
 
 }
 
+/*
+.ch-info p a {
+
+    width: 5rem;
+    height: 5rem;
+    }
+
+
+.ch-grid li {
+    width: 15.75rem;
+    height: 15.75rem;
+    display: inline-block;
+    margin: 20px;
+}
+*/
 

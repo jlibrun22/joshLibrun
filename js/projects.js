@@ -1,5 +1,5 @@
 require([], function() {
-
+    console.log('projects.js is executing');
 	 $('#campaign-more').click(function(){
         $('.campaign.modal').modal('setting', 'transition', 'fade')
         .modal('show');
