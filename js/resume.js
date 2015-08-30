@@ -55,8 +55,8 @@ require(['libs/avgrund/jquery.avgrund'], function() {
 
 $(function() {
         $('#show').avgrund({
-            width: 640, // max is 640px
-            height: 350, // max is 350px
+            width: 'N/A', // max is 640px
+            height: 'N/A', // max is 350px
             holderClass: 'modalDialog',
             showClose: true,
             showCloseText: 'close',
@@ -67,8 +67,8 @@ $(function() {
         });
 
           $('#show-first-rotation').avgrund({
-            width: 640, // max is 640px
-            height: 350, // max is 350px
+            width: 'N/A', // max is 640px
+            height: 'N/A', // max is 350px
             holderClass: 'modalDialog',
             showClose: true,
             showCloseText: 'close',
@@ -83,8 +83,8 @@ $(function() {
 
 
             $('#show-second-rotation').avgrund({
-            width: 640, // max is 640px
-            height: 350, // max is 350px
+            width: 'N/A', // max is 640px
+            height: 'N/A', // max is 350px
             holderClass: 'modalDialog',
             showClose: true,
             showCloseText: 'close',
@@ -98,8 +98,8 @@ $(function() {
 
 
               $('#show-third-and-fourth-rotation').avgrund({
-            width: 640, // max is 640px
-            height: 350, // max is 350px
+            width: 'N/A', // max is 640px
+            height: 'N/A', // max is 350px
             holderClass: 'modalDialog',
             showClose: true,
             showCloseText: 'close',
@@ -114,8 +114,8 @@ $(function() {
 
 
               $('#show-playspot').avgrund({
-            width: 640, // max is 640px
-            height: 350, // max is 350px
+            width: 'N/A', // max is 640px
+            height: 'N/A', // max is 350px
             holderClass: 'modalDialog',
             showClose: true,
             showCloseText: 'close',
@@ -126,8 +126,8 @@ $(function() {
         });
 
             $('#show-dance-events').avgrund({
-            width: 640, // max is 640px
-            height: 350, // max is 350px
+            width: 'N/A', // max is 640px
+            height: 'N/A', // max is 350px
             holderClass: 'modalDialog',
             showClose: true,
             showCloseText: 'close',

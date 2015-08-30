@@ -1,0 +1,262 @@
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    .mini-slide{
+
+        font-size: .17rem;
+        width: 5rem;
+        height: 5rem;
+
+    }
+}
+/* ----------- iPhone 5 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+       html{
+
+        font-size: 10px;
+    }
+
+#rotator .active {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+}
+
+#rotator {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
+#rotator .non-active-top {
+    top: 80%;
+    left: 5%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator .non-active-middle {
+    top: 80%;
+    left: 35%;
+    height: 20%;
+    width: 20%;
+}
+#rotator .non-active-bottom {
+    top: 80%;
+    left: 75%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator h2 {
+    margin-top: 100%;
+}
+
+#rotator .active .resume-content {
+   
+    width: 80%;
+    margin: auto;
+}
+
+
+}
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    html{
+
+        font-size: 10px;
+    }
+
+#rotator .active {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+}
+
+#rotator {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
+#rotator .non-active-top {
+    top: 80%;
+    left: 5%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator .non-active-middle {
+    top: 80%;
+    left: 35%;
+    height: 20%;
+    width: 20%;
+}
+#rotator .non-active-bottom {
+    top: 80%;
+    left: 75%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator h2 {
+    margin-top: 100%;
+}
+
+#rotator .active .resume-content {
+   
+    width: 80%;
+    margin: auto;
+}
+
+
+
+}
+
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+      html{
+
+        font-size: 10px;
+    }
+
+#rotator .active {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+}
+
+#rotator {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
+#rotator .non-active-top {
+    top: 80%;
+    left: 5%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator .non-active-middle {
+    top: 80%;
+    left: 35%;
+    height: 20%;
+    width: 20%;
+}
+#rotator .non-active-bottom {
+    top: 80%;
+    left: 75%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator h2 {
+    margin-top: 100%;
+}
+
+#rotator .active .resume-content {
+   
+    width: 80%;
+    margin: auto;
+}
+
+
+
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+       html{
+
+        font-size: 10px;
+    }
+
+#rotator .active {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+}
+
+#rotator {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
+#rotator .non-active-top {
+    top: 80%;
+    left: 5%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator .non-active-middle {
+    top: 80%;
+    left: 35%;
+    height: 20%;
+    width: 20%;
+}
+#rotator .non-active-bottom {
+    top: 80%;
+    left: 75%;
+    height: 20%;
+    width: 20%;
+}
+
+#rotator h2 {
+    margin-top: 100%;
+}
+
+#rotator .active .resume-content {
+   
+    width: 80%;
+    margin: auto;
+}
+
+
+}
